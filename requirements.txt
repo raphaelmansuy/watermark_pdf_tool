@@ -1,0 +1,5 @@
+click
+pypdf
+reportlab
+pypdfium2
+Pillow
