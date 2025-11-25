@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "watermark-pdf-tool"
+description = "A CLI utility to add customizable watermarks to PDF files."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [{name = "Raphael Mansuy", email = "raphael.mansuy@gmail.com"}]
+keywords = ["pdf", "watermark", "cli"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = [
+    "pypdf",
+    "click",
+    "reportlab",
+    "pypdfium2",
+    "Pillow"
+]
+
+# The version will be read from the package’s __init__.py
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/raphaelmansuy/watermark_pdf_tool"
+Repository = "https://github.com/raphaelmansuy/watermark_pdf_tool.git"
+Documentation = "https://github.com/raphaelmansuy/watermark_pdf_tool#readme"
+
+[project.scripts]
+watermark-pdf = "watermark_pdf_tool.cli:main"
